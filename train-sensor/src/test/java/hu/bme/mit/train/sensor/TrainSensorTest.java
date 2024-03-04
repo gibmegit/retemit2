@@ -10,7 +10,7 @@ public class TrainSensorTest {
     @Before
     public void before() {
         // TODO Add initializations
-        TrainUser trainuser;
+        TrainUser trainuser = new TrainUser();
     }
 
     @Test
