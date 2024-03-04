@@ -10,10 +10,15 @@ public class TrainSensorTest {
     @Before
     public void before() {
         // TODO Add initializations
+        TrainUser trainuser;
     }
 
     @Test
-    public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+    public void emergencyBreakTest() {
+        trainuser.setJoystickPosition(1);
+        trainuser.setJoystickPosition(2);
+        trainuser.setJoystickPosition(3);
+        emergencyBreak();
+        assertEquals(0, trainuser.getSpeedLimit());
     }
 }
