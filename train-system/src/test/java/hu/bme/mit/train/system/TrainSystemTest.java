@@ -53,7 +53,7 @@ public class TrainSystemTest {
 		@Test
 		public void emergencyBreakTest() {
 			sensor.emergencyBreak();
-			assertEquals(0, sensor.getSpeedLimit());
+			Assert.assertEquals(0, sensor.getSpeedLimit());
 		}
 	
 }
