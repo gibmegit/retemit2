@@ -1,5 +1,7 @@
 package hu.bme.mit.train.interfaces;
 
+import java.util.Date;
+
 public interface TrainController {
 
 	void followSpeed();

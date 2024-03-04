@@ -55,5 +55,11 @@ public class TrainSystemTest {
 			sensor.emergencyBreak();
 			Assert.assertEquals(0, sensor.getSpeedLimit());
 		}
+
+		@Test
+		public void tachographTest(){
+			sensor.log();
+			Assert.assertEquals(1, sensor.getLog().size());
+		}
 	
 }

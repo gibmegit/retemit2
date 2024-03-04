@@ -9,6 +9,7 @@ public class TrainSensorImpl implements TrainSensor {
 	private TrainController controller;
 	private TrainUser user;
 	private int speedLimit = 5;
+	private Table <Date, int, int> tachograph = HashBasedTable.create(); //date, speed, joystick
 
 	public TrainSensorImpl(TrainController controller, TrainUser user) {
 		this.controller = controller;
@@ -29,6 +30,18 @@ public class TrainSensorImpl implements TrainSensor {
 	@Override
 	public void emergencyBreak(){
 		overrideSpeedLimit(0);
+	}
+
+	@Override
+	public void log(){
+		this.tachograph.put(Date date = new Date(), 
+							controller.getReferenceSpeed(), 
+							user.getJoystickPosition());
+	}
+
+	@Override
+	public Table getLog(){
+		return tachograph;
 	}
 
 }
