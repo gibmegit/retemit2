@@ -67,4 +67,4 @@ The figure below illustrates this behavior using an example.
 
 * Második féle formázás
 1. Harmadik féle formázás
-1. Harmadik féle formázás második fele
+1. Ez a B branch
