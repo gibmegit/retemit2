@@ -1,6 +1,7 @@
 package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
+import java.util.Timer;
 
 public class TrainControllerImpl implements TrainController {
 
@@ -44,5 +45,16 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
+	}
+
+	@Override
+	// Timerrel megvalositva
+	public void chooChoo(){		
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+			public void run(){
+				followSpeed(); 
+			}
+		}, 2000)	// Delay megadasa ms-ben
 	}
 }
