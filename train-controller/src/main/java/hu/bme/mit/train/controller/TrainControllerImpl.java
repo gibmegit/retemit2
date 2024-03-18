@@ -51,7 +51,7 @@ public class TrainControllerImpl implements TrainController {
 		Thread speedFollowerThread = new Thread(() -> {
             followSpeed();
         });
-		thread.start();
+		speedFollowerThread.start();
 	}
 
 }
