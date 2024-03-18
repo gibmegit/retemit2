@@ -55,6 +55,6 @@ public class TrainControllerImpl implements TrainController {
 			public void run(){
 				followSpeed(); 
 			}
-		}, 2000)	// Delay megadasa ms-ben
+		}, 2000);	// Delay megadasa ms-ben
 	}
 }
