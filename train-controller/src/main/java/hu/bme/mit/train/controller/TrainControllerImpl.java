@@ -45,4 +45,13 @@ public class TrainControllerImpl implements TrainController {
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
 	}
+
+	@Override
+	public void Choochoo(){
+		Thread speedFollowerThread = new Thread(() -> {
+            followSpeed();
+        });
+		thread.start();
+	}
+
 }
